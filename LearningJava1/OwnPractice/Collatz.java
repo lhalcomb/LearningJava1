@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-//import java.util.Random;
 
 public class Collatz{
     public static void main(String[] args){
@@ -20,11 +19,10 @@ public class Collatz{
             } 
             i++;
             list.add(n2);
-
+            //System.out.print(n);
         }
-        System.out.println("Iteration Count>> " + i);
-        System.out.println(n1+ ": " + list);
+        System.out.println("<Iterations--> " + i);
+        //System.out.println(n2);
+        System.out.println("<Sequence--> " + n1 + ": "+ list);
     }
 }
-
-
