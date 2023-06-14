@@ -1,6 +1,6 @@
-import java.lang.ref.Cleaner;
 import java.util.ArrayList;
 import java.util.List;
+//import java.util.Random;
 
 public class Collatz{
     public static void main(String[] args){
@@ -8,22 +8,22 @@ public class Collatz{
     }
 
     private static void collatz(){
-        long n = 7;
+        long n1 = 7;
+        long n2 = n1;
         long i = 0;
         List<Long> list = new ArrayList<>();
-        while (n!=1){
-            if (n%2==0) {
-                n/=2;
+        while (n2!=1){
+            if (n2%2==0) {
+                n2/=2;
             } else {
-                n = (3*n +1);
+                n2 = (3*n2 +1);
             } 
             i++;
-            list.add(n);
-            //System.out.print(n);
+            list.add(n2);
+
         }
-        System.out.println(i);
-        System.out.println(n);
-        System.out.println(list);
+        System.out.println("Iteration Count>> " + i);
+        System.out.println(n1+ ": " + list);
     }
 }
 
