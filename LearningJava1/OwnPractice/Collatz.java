@@ -26,5 +26,3 @@ public class Collatz{
         System.out.println("<Sequence--> " + n1 + ": "+ list);
     }
 }
-
-
