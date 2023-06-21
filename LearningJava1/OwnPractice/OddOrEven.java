@@ -1,4 +1,3 @@
-package LearningJava1.OwnPractice;
 import java.util.Scanner;
 
 public class OddOrEven {
