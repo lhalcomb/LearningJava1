@@ -10,6 +10,6 @@ public class EvenRecursion {
         }
     }
     public static void main(String[] args){
-        Evens(1);
+        Evens(4);
     }
 }

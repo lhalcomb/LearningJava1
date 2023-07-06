@@ -2,6 +2,7 @@ package LearningJava1.OwnPractice;
 
 import java.util.ArrayList;
 import java.util.List;
+//import java.util.Scanner;
 
 public class Collatz{
     public static void main(String[] args){
@@ -9,6 +10,7 @@ public class Collatz{
     }
 
     private static void collatz(){
+        
         long n1 = 7;
         long n2 = n1;
         long i = 0;
