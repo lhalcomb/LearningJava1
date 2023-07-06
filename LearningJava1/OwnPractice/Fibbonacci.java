@@ -10,7 +10,7 @@ public class Fibbonacci {
 
     }
     public static void main(String[] args){
-        int n = 10;
+        int n = 10000;
 
         for (int i = 0; i < n; i++){
             System.out.println("fibbonacci number: "+ fib(i) + " ");

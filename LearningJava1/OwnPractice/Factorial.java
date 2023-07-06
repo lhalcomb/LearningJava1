@@ -4,13 +4,17 @@ import java.util.Scanner;
 
 public class Factorial {
     public static void main(String[] args){
-        long n, c, f = 1;
-        System.out.println("Enter a number: ");
+        long f = 1;
+
+        System.out.print("Enter a number: ");
         Scanner sc  = new Scanner(System.in);
-        n = sc.nextInt();
-        for(c = 1;  c <= n; c++){
+        long n = sc.nextLong();
+
+
+        for(long c = n;  c >= 1; c--){
             f = f*c;
         }
+
         System.out.println("Factorial of " +n+ " is " + f);
     }
 }
