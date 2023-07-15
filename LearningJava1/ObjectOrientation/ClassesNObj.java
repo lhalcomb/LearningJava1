@@ -6,6 +6,7 @@ public class ClassesNObj {
         bob1.height = 12;
 
         Zebra bob = new Zebra();
+        
 
         bob.height = 4.5;
         bob.weight = 5.7;
