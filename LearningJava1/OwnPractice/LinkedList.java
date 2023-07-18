@@ -1,5 +1,5 @@
 package LearningJava1.OwnPractice;
-import java.io.*;
+//import java.io.*;
 
 public class LinkedList 
 {
@@ -21,41 +21,34 @@ public class LinkedList
     public static LinkedList insert(LinkedList list, int data)
     {
         Node new_node = new Node(data); //<- why the hell isnt this working?, '*static class Node*'
-
+        new_node.next = null;
+       
         // If the linkedlist is empty then make this node as head of the Linked List and return
         if (list.head == null)
         {
             list.head = new_node;
-        }
+        
         //Traverse through the list and add the inserted data at the end 
-        else{
+        }else {
             Node last = list.head;
             while (last.next != null){
                 last = last.next; 
             }
+
             last.next = new_node; 
         }
+
         // Return the new inserted list 
         return list;
     }
 
 
-    public static LinkedList InsertAfter(LinkedList list, Node prev_node, int new_data)
+    public static LinkedList InsertAfter(LinkedList list, int temp, int data)
     {
-        Node new_node = new Node(new_data);
+        Node new_node = new Node(data);
+        Node temp_node = new Node(temp);
 
-        if (prev_node == null)
-        {
-            System.out.println("The given previous node cannot be null/empty. ");
-            return list;
-        }
-        while (list.head != null)
-        {
-            new_node.next = prev_node.next;
-            prev_node.next = new_node;
-        }
-    return list;
-       
+        
 
     }
 
@@ -104,7 +97,7 @@ public class LinkedList
         if (index == 0 && CurrNode != null) // Case 1: If index is 0, then the head must be deleted
         {   
             list.head = CurrNode.next;
-            System.out.println(index + " found at this position");
+            System.out.println(index + " element was deleted.");
             
             return list;
         }
@@ -116,7 +109,7 @@ public class LinkedList
             {
                 prev.next = CurrNode.next;
 
-                System.out.println(index + " position element deleted");
+                System.out.println(index + " position element deleted.");
 
                 break;
 
@@ -131,7 +124,7 @@ public class LinkedList
 
         if (CurrNode == null) //Case 3: The index given is greater than the size of the list
         {
-            System.out.println(index + " was not found"); //here we will just return a dummy statement 
+            System.out.println(index + " was not found."); //here we will just return a dummy statement 
         }
 
         return list;
@@ -145,7 +138,7 @@ public class LinkedList
       
      while (CurrNode != null)
       {
-        System.out.println(CurrNode.data + ' ');
+        System.out.print(CurrNode.data + " ");
         CurrNode = CurrNode.next;
       }
       System.out.println();
@@ -155,14 +148,25 @@ public class LinkedList
 
     LinkedList list = new LinkedList();
         
-    list = insert(list,1);
-    list = insert(list,2);
-    list = insert(list,3);
+    list = insert(list, 1);
+    list = insert(list, 2);
+    list = insert(list, 3);
     printList(list);
 
-    RemoveNodebyKey(list,3);
+    RemoveNodebyKey(list, 3);
 
     printList(list);
+
+    list = insert(list, 4);
+    list = insert(list, 5);
+
+
+    DeleteNodeAtPos(list, 0);
+    printList(list);
+
+    InsertAfter(list.head.next, 8);
+
+
 
     }
 }
