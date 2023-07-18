@@ -46,8 +46,20 @@ public class LinkedList
     public static LinkedList InsertAfter(LinkedList list, int temp, int data)
     {
         Node new_node = new Node(data);
-        Node temp_node = new Node(temp);
+        Node traverse = list.head;
 
+        while (traverse.next != null)
+        {
+            if (traverse.data == temp){
+                new_node.next = traverse.next;
+                traverse.next = new_node;
+                break;
+            }
+        traverse = traverse.next;
+        }
+
+
+        return list;
         
 
     }
@@ -88,6 +100,7 @@ public class LinkedList
         return list;
     
     }
+
 
     public static LinkedList 
     DeleteNodeAtPos(LinkedList list, int index)
@@ -131,6 +144,7 @@ public class LinkedList
 
     }
 
+
     public static void printList(LinkedList list)
     { 
      Node CurrNode = list.head;
@@ -143,6 +157,7 @@ public class LinkedList
       }
       System.out.println();
     }
+    
 
     public static void main(String[] args){
 
@@ -151,20 +166,22 @@ public class LinkedList
     list = insert(list, 1);
     list = insert(list, 2);
     list = insert(list, 3);
-    printList(list);
+    printList(list); //--> 1, 2, 3
 
     RemoveNodebyKey(list, 3);
 
-    printList(list);
+    printList(list); //--> 1, 2
 
     list = insert(list, 4);
     list = insert(list, 5);
 
 
     DeleteNodeAtPos(list, 0);
-    printList(list);
+    printList(list); //--> 2, 4, 5
 
-    InsertAfter(list.head.next, 8);
+    InsertAfter(list, 4, 8);
+
+    printList(list); //--> 2, 4, 8, 5
 
 
 
