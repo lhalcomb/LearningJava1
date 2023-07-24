@@ -4,9 +4,12 @@ public class Classnobj3 {
     
   
     public static void main(String[] args) {
-        spider r = new spider(8,8);
+        spider r = new spider(0);
 
-        System.out.println(r.NumOfEyes);
-        System.out.println(r.NumOfLegs);
+        r.setNumOfEyes(8);
+
+        //System.out.println(r.NumOfEyes);
+        //System.out.println(r.NumOfLegs);
+        System.out.print(r.getNumOfEyes());
      }
 }
