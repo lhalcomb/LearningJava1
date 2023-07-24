@@ -1,10 +1,10 @@
 package LearningJava1.ObjectOrientation.ClassesNObjCont;
 
-public class spider extends Insects{
+public class spider extends Insect{
     //int NumOfEyes;
 
     public spider(int numOfLegs){
-        super(NumOfLegs);
+        super(numOfLegs);
         //this.NumOfEyes = NumOfEyes;
     }
 
