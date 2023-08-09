@@ -11,7 +11,7 @@ public class Collatz{
 
     private static void collatz(){
         
-        long n1 = 7;
+        long n1 = 1000000;
         long n2 = n1;
         long i = 0;
         List<Long> list = new ArrayList<>();
