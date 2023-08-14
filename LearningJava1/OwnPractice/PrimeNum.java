@@ -17,10 +17,10 @@ class PrimeNum{
 
     public static void main(String[] args){
 
-        if (isPrime(21)){
-            System.out.println("The number " + 21 +" is prime");
+        if (isPrime(124612)){
+            System.out.println("The number " + 124612 +" is prime");
         }else{
-            System.out.println("The number "+  21 + " isn't a prime.");
+            System.out.println("The number "+  124612 + " isn't a prime.");
         }
 
 
