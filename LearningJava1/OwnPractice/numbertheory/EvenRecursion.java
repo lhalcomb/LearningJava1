@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice;
+package LearningJava1.OwnPractice.numbertheory;
 
 public class EvenRecursion {
     static void Evens(int a){

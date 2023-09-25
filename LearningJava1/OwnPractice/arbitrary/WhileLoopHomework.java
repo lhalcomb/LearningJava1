@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice;
+package LearningJava1.OwnPractice.arbitrary;
 import java.util.Scanner;
 
 public class WhileLoopHomework {

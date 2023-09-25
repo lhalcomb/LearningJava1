@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice;
+package LearningJava1.OwnPractice.numbertheory;
 
 /*This is Java code representing the famous Conjecture from Prussian Mathematician Christian Goldbach. 
  he had wonderful contributions to Number Theory. */
