@@ -1,5 +1,7 @@
 package LearningJava1.OwnPractice.DSAlgorithms;
 
+import java.util.Random;
+
 public class SortAlgorithm {
 
     static void bubblesort(int arr[], int n){
@@ -22,6 +24,35 @@ public class SortAlgorithm {
                 }
         }
     }
+    static void swap(int[] arr, int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp; 
+    }
+
+    static int partition(int[] arr, int low, int high)
+    {
+
+        int pivot = arr[high];
+        int i = (low - 1);
+
+        for (int j = low; i <= high - 1; i++)
+        {
+            if (arr[j] < pivot) 
+            {
+                i++;
+                swap(arr, i, j);
+            }
+
+        }
+        swap(arr, i + 1, high);
+        return (i + 1);
+
+    }
+    
+
+    static void quickSort(int arr[], )
+
 
 
         static void printarray(int arr[], int size){
@@ -33,14 +64,23 @@ public class SortAlgorithm {
         }
     
         
-        public static void main(String[] args){
+        public static void main(String args[]){
 
             
-            int arr[] = {34, 54, 97, 38, 79, 39, 23, 41}; 
+            Random rand = new Random();
+            int[] arr = new int[1];
+            for (int i = 0; i < arr.length; i++){
+                arr[i] = rand.nextInt(100)+1;
+        } 
             int n = arr.length;
-            bubblesort(arr, n);
+            final long startBS = System.nanoTime();
+            bubblesort(arr, n); 
+            final long endBS = System.nanoTime();
+            long elapsedBS = endBS - startBS;
+            double convertBS = (double) elapsedBS / 1000000000;
             System.out.println("The sorted list is: ");
             printarray(arr, n);
+            System.out.println("Total Bubble Sort execution time: " + (convertBS) + "s\n");
 
     
 
