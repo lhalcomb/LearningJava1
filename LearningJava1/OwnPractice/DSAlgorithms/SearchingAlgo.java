@@ -86,11 +86,11 @@ public class SearchingAlgo
 
         //case 1
         Random rand = new Random();
-        int[] arr = new int[100000];
+        int[] arr = new int[1215 ];
         for (int i = 0; i < arr.length; i++){
             arr[i] = rand.nextInt(1000)+1;
         }
-        //bubblesort(arr, arr.length);
+        bubblesort(arr, arr.length);
         System.out.println("List being searched: ");
         printarray(arr, arr.length);
         /*reverseArr(arr);
@@ -104,38 +104,38 @@ public class SearchingAlgo
 
         //case 1 linear search
         //execution time
-         /*final long startLS = System.nanoTime();
+         final long startLS = System.nanoTime();
          System.out.print("Linear Search ->> " + "index ");
          System.out.println(linearSearch(arr, n, x)); 
          final long endLS = System.nanoTime();
          long elapsedLS = endLS - startLS; 
-         System.out.println("Total Linear Search execution time: " + (elapsedLS) + "ms");*/
+         System.out.println("Total Linear Search execution time: " + (elapsedLS) + "ms");
 
         //space used
-        linearSearch(arr, n, x);
+        /*linearSearch(arr, n, x);
         Runtime lruntime = Runtime.getRuntime();
         lruntime.gc();
         long linsearchmem = lruntime.totalMemory() - lruntime.freeMemory();
          
-        System.out.println("Total Linear Search memory usage: " + linsearchmem + "\n");
+        System.out.println("Total Linear Search memory usage: " + linsearchmem + "\n");*/
 
         //case 1 binary search
         //execution time
-         /*final long startBS = System.nanoTime();
+         final long startBS = System.nanoTime();
          System.out.println("Binary Search ->> " + "index " + binsearch(arr, 0, n, x));
          final long endBS = System.nanoTime();
          long elapsedBS = endBS - startBS;
-         System.out.println("Total Binary Search execution time: " + (elapsedBS) + "ms");*/
+         System.out.println("Total Binary Search execution time: " + (elapsedBS) + "ms");
 
         //space used
         
-         binsearch(arr,0, n, x);
+         /*binsearch(arr,0, n, x);
          Runtime bruntime = Runtime.getRuntime();
          bruntime.gc();
          long binsearchmem = bruntime.totalMemory() - bruntime.freeMemory();
          
          
-         System.out.println("Total Binary Search memory usage: " + (binsearchmem) + "\n");
+         System.out.println("Total Binary Search memory usage: " + (binsearchmem) + "\n");*/
 
 
     }

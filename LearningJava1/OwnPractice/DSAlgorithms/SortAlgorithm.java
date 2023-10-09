@@ -79,9 +79,9 @@ public class SortAlgorithm
 
             
             Random randi = new Random();
-            int arr[] = new int[1];
+            int arr[] = new int[1215];
             for (int i = 0; i < arr.length; i++){
-                arr[i] = randi.nextInt(10)+1;
+                arr[i] = randi.nextInt(100)+1;
         } 
 
             int n = arr.length;
@@ -89,14 +89,14 @@ public class SortAlgorithm
             bubblesort(arr, n); 
             final long endBS = System.nanoTime();
             long elapsedBS = endBS - startBS;
-            System.out.println("The sorted list is: ");
-            printarray(arr, n);
+            //System.out.println("The sorted list is: ");
+            //printarray(arr, n);
             System.out.println("Total Bubble Sort execution time: " + (elapsedBS) + "ms\n");
 
             Random randj = new Random();
-            int arrj[] = new int[1];
+            int arrj[] = new int[1215];
             for (int j = 0; j < arrj.length; j++){
-                arrj[j] = randj.nextInt(10)+1;
+                arrj[j] = randj.nextInt(100)+1;
         } 
 
             int N = arrj.length;
@@ -104,8 +104,8 @@ public class SortAlgorithm
             quickSort(arrj, 0, N-1); 
             final long endQS = System.nanoTime();
             long elapsedQS = endQS - startQS;
-            System.out.println("The sorted list is: ");
-            printarray(arr, N);
+            //System.out.println("The sorted list is: ");
+            //printarray(arr, N);
             System.out.println("Total Quick Sort execution time: " + (elapsedQS) + "ms\n");
 
     
