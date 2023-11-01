@@ -86,9 +86,9 @@ public class SearchingAlgo
 
         //case 1
         Random rand = new Random();
-        int[] arr = new int[1215 ];
+        int[] arr = new int[10];
         for (int i = 0; i < arr.length; i++){
-            arr[i] = rand.nextInt(1000)+1;
+            arr[i] = rand.nextInt(100)+1;
         }
         bubblesort(arr, arr.length);
         System.out.println("List being searched: ");
@@ -97,14 +97,14 @@ public class SearchingAlgo
         System.out.println("reversed string " + Arrays.toString(arr));*/
         
 
-        int x = (int)((Math.random() * 1000) + 1);
+        int x = (int)((Math.random() * 100) + 1);
         System.out.println("Searching list for number " + x);
         int n = arr.length - 1;
 
 
         //case 1 linear search
         //execution time
-         final long startLS = System.nanoTime();
+         /*final long startLS = System.nanoTime();
          System.out.print("Linear Search ->> " + "index ");
          System.out.println(linearSearch(arr, n, x)); 
          final long endLS = System.nanoTime();
@@ -121,11 +121,11 @@ public class SearchingAlgo
 
         //case 1 binary search
         //execution time
-         final long startBS = System.nanoTime();
+         //final long startBS = System.nanoTime();
          System.out.println("Binary Search ->> " + "index " + binsearch(arr, 0, n, x));
-         final long endBS = System.nanoTime();
-         long elapsedBS = endBS - startBS;
-         System.out.println("Total Binary Search execution time: " + (elapsedBS) + "ms");
+         //final long endBS = System.nanoTime();
+         //long elapsedBS = endBS - startBS;
+         //System.out.println("Total Binary Search execution time: " + (elapsedBS) + "ms");
 
         //space used
         
