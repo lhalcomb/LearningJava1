@@ -1,7 +1,7 @@
 package LearningJava1.OwnPractice.DSAlgorithms;
 import java.util.Random;
 
-public class heaps
+public class AVLTree
 {
     class Node
     {
@@ -16,7 +16,7 @@ public class heaps
         }
     }
 
-    static class AVLTree 
+    static class AVLTree1 
     {
         Node root;
 
