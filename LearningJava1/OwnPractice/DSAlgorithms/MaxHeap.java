@@ -111,7 +111,7 @@ public class MaxHeap {
 
     public static void main(String[] args)
     {
-        MaxHeap maxHeap = new MaxHeap(10);
+        MaxHeap maxHeap = new MaxHeap(7);
 
         maxHeap.insert(7);
         maxHeap.insert(4);
