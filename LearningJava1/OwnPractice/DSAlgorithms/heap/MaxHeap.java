@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.DSAlgorithms;
+package LearningJava1.OwnPractice.DSAlgorithms.heap;
 
 public class MaxHeap {
     private int[] Heap;

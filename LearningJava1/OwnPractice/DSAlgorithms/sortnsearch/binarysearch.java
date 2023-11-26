@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.DSAlgorithms;
+package LearningJava1.OwnPractice.DSAlgorithms.sortnsearch;
 
 public class binarysearch
 {
