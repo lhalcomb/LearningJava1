@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice;
+package LearningJava1.OwnPractice.numbertheory;
 
 class PrimeNum{
 

@@ -1,5 +1,7 @@
-package LearningJava1.OwnPractice;
+package LearningJava1.OwnPractice.DSAlgorithms;
 //import java.io.*;
+
+import java.util.Random;
 
 public class LinkedList 
 {
@@ -144,6 +146,91 @@ public class LinkedList
 
     }
 
+    Node merge(Node a, Node b)
+    {
+        Node result = null;
+        if (a == null)
+        {
+            return a;
+        }
+        if (b == null)
+        {
+            return b;
+        }
+
+        if (a.data <= b.data)
+        {
+            result = a;
+            result.next = merge(a.next, b);
+        }
+        else{
+            result = b; 
+            result.next = merge(b, b.next);
+        }
+        return result;
+    }
+
+    public static Node getMiddle(Node head)
+    {
+        if (head == null)
+        {
+            return head;
+        }
+
+        Node slow = head, fast = head;
+        while (fast.next != null && fast.next.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+
+    }
+
+    Node mergeSort(Node h)
+    {
+        if (h == null || h.next == null)
+        {
+            return h;
+        }
+        Node middle = getMiddle(h);
+        Node next2middle = middle.next;
+
+        middle.next = null;
+
+        Node left = mergeSort(h);
+        Node right =  mergeSort(next2middle);
+        Node sortedlist = sortedMerge(left, right);
+
+        return sortedlist;
+    }
+
+    Node sortedMerge(Node a, Node b)
+    {
+        Node result = null;
+
+        if (a == null)
+        {
+            return b;
+        }
+        if (b == null)
+        {
+            return a;
+        }
+
+        if (a.data <= b.data)
+        {
+            result = a;
+            result.next = sortedMerge(a.next, b);
+        }
+        else
+        {
+            result = b;
+            result.next = sortedMerge(a, b.next);
+        }
+        return result;
+    }
 
     public static void printList(LinkedList list)
     { 
@@ -157,13 +244,31 @@ public class LinkedList
       }
       System.out.println();
     }
-    
+
+    public void printList(Node head)
+    {
+        while (head != null) {
+            System.out.print(head.data + " ");
+            head = head.next;
+        }
+    }
 
     public static void main(String[] args){
 
     LinkedList list = new LinkedList();
+    Random rand = new Random();
+    int arr[] = new int[10];
+    for (int i = 0; i < arr.length; i++){
+        arr[i] = rand.nextInt(100)+1;
+        list = insert(list, arr[i]);
+    } 
+
+
+    list.head = list.mergeSort(list.head);
+    System.out.print("Sorted Linked List -->  ");
+    list.printList(list.head);
         
-    list = insert(list, 1);
+    /*list = insert(list, 1);
     list = insert(list, 2);
     list = insert(list, 3);
     printList(list); //--> 1, 2, 3
@@ -181,7 +286,7 @@ public class LinkedList
 
     InsertAfter(list, 4, 8);
 
-    printList(list); //--> 2, 4, 8, 5
+    printList(list); //--> 2, 4, 8, 5*/
 
 
 
