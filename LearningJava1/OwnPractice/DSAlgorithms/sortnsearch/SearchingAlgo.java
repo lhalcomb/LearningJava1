@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.DSAlgorithms.sortnsearch;
+package DSAlgorithms.sortnsearch;
 
 import java.util.Random; import java.lang.Math; import java.util.*; import jdk.jfr.Event;
 

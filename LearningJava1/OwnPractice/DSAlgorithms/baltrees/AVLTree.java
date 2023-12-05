@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.DSAlgorithms.baltrees;
+package DSAlgorithms.baltrees;
 import java.util.Random;
 
 public class AVLTree

@@ -8,7 +8,7 @@ public class GoldbachConjecture {
     //Driver Code to run program
     public static void main(String[] args){ 
         //int num = (int) ((Math.random() * 100)); //Even Number to represent sum of two primes. 
-        int num = 874;
+        int num = 38890;
         boolean check = false; //Boolean for checking if the number is even.
         int counter = 0;
         for (int i = 2; i <= num / 2; ++i){ // For loop that begins the process of seperating the even number into sum of two primes. 

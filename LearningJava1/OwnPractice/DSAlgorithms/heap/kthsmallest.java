@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.DSAlgorithms.heap;
+package DSAlgorithms.heap;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
