@@ -1,18 +1,22 @@
 package LearningJava1.OwnPractice.numbertheory;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /*This is Java code representing the famous Conjecture from Prussian Mathematician Christian Goldbach. 
  he had wonderful contributions to Number Theory. */
+ //Goldbach's partition, Goldbach's comet 
 
 public class GoldbachConjecture {
 
     //Driver Code to run program
     public static void main(String[] args){ 
         //int n = (int) ((Math.random() * 100)); //Even Number to represent sum of two primes. 
-        int n = 5; // Number of even numbers to generate and check
+        int n = 50; // Number of even numbers to generate and check
         Map<Integer, Integer> EvenNumberofEq = new HashMap<>();
+        List<Integer> EqCountList = new ArrayList<>();
         for (int i = 2; i <= n; i++) {
             int num = 2 * i; // Generating even numbers
             //System.out.println("Even number: " + num);
@@ -28,6 +32,11 @@ public class GoldbachConjecture {
             int evenNumber = entry.getKey();
             int equationsCount = entry.getValue();
             System.out.println("Even number: " + evenNumber + ", Equations count: " + equationsCount);
+            EqCountList.add(equationsCount);
+        }
+        
+        for (int count: EqCountList){
+            System.out.print(count+", ");
         }
         
     }
