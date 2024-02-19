@@ -14,7 +14,7 @@ public class GoldbachConjecture {
         for (int i = 2; i <= num / 2; ++i){ // For loop that begins the process of seperating the even number into sum of two primes. 
             if (checkPrime(i)){ //If the number is prime it runs down to the function below 
 
-                if (checkPrime(num-i)){ 
+                if (checkPrime(num - i)){ 
                     System.out.printf("%d = %d + %d\n", num, i, num - i);
                     check = true;
                     counter += 1;
@@ -28,7 +28,7 @@ public class GoldbachConjecture {
         System.out.printf("The number of equations for %d is %d. ", num, counter);
     }
 
-    static boolean checkPrime(int n){ // Functiomn created to check if number is prime and returns that number via driver code for loop. 
+    static boolean checkPrime(int n){ // Function created to check if number is prime and returns that number via driver code for loop. 
         boolean isPrime = true;
 
         for (int i = 2; i<= n/2; ++i){
