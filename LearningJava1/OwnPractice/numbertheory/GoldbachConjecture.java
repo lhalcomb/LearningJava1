@@ -1,5 +1,6 @@
 package LearningJava1.OwnPractice.numbertheory;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
