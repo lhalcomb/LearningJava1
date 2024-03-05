@@ -16,8 +16,8 @@ public class GoldbachConjecture {
     public static void main(String[] args){ 
 
 
-        int n = (int) ((Math.random() * 100)); //Even Number to represent sum of two primes. 
-        //int n = 50; // Number of even numbers to generate and check
+        //int n = (int) ((Math.random() * 100)); //Even Number to represent sum of two primes.
+        int n = 10; // Number of even numbers to generate and check
 
         System.out.printf("Printing" + n + " amount of equations");
         Map<Integer, Integer> EvenNumberofEq = new HashMap<>();
@@ -67,7 +67,7 @@ public class GoldbachConjecture {
 
     static void updatePrimeIntensityMap(int num, Map<Integer, Integer> PrimeIntensityMap){
         for (int i = 2; i <= num/ 2; i++){
-            if (checkPrime(i) && checkPrime( - i)){
+            if (checkPrime(i) && checkPrime( num - i)){
                 PrimeIntensityMap.put(i, PrimeIntensityMap.getOrDefault(i, 0) + 1);
                 PrimeIntensityMap.put(num - i, PrimeIntensityMap.getOrDefault(num - i, 0) + 1);
             }
