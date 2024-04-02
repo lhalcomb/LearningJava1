@@ -11,7 +11,7 @@ public class Fibbonacci {
 
     }
     public static void main(String[] args){
-        int n = 50;
+        int n = 5;
         List<Integer> list = new ArrayList<>();
 
         int count = 0; 
