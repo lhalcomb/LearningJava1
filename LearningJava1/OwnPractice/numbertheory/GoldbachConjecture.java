@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.numbertheory;
+package numbertheory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,8 +10,8 @@ public class GoldbachConjecture {
 
     //Driver Code to run program
     public static void main(String[] args){ 
-        //int n = (int) ((Math.random() * 100)); //Even Number to represent sum of two primes. 
-        int n = 5; // Number of even numbers to generate and check
+        int n = (int) ((Math.random() * 100)); //Even Number to represent sum of two primes. 
+        //int n = 5; // Number of even numbers to generate and check
         Map<Integer, Integer> EvenNumberofEq = new HashMap<>();
         for (int i = 2; i <= n; i++) {
             int num = 2 * i; // Generating even numbers
