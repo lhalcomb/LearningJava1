@@ -1,17 +1,21 @@
-package LearningJava1.OwnPractice.numbertheory;
+package numbertheory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 //import java.util.Scanner;
 
 public class Collatz{
     public static void main(String[] args){
+        Random rand = new Random();
+
         collatz();
     }
 
     private static void collatz(){
         
-        long n1 = 37;
+        //long n1 = 37;
+        long n1 = rand.nextInt(100);
         long n2 = n1;
         long i = 0;
         List<Long> list = new ArrayList<>();
