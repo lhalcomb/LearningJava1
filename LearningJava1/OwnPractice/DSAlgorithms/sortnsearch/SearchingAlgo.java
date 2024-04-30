@@ -1,6 +1,7 @@
 package DSAlgorithms.sortnsearch;
 
-import java.util.Random; import java.lang.Math; import java.util.*; import jdk.jfr.Event;
+import java.util.Random; 
+import java.lang.Math; 
 
 
 public class SearchingAlgo 

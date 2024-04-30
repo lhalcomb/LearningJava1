@@ -15,7 +15,7 @@ public class Non_NumericDT {
          char c  = 'c';
          char c1 = 99;
          //There is also String but this is a full 'string'  of characters!
-         String d = "This is a string!"; //This is not a primitive data type in Java
+         //String d = "This is a string!"; //This is not a primitive data type in Java
          
          System.out.println((int)c);
          System.out.println(c1);

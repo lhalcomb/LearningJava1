@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.arbitrary;
+package arbitrary;
 import java.util.Scanner;
 
 public class AverageOfNums {
@@ -8,7 +8,7 @@ public class AverageOfNums {
         double secdubl = sc.nextDouble();
         double thirddubl = sc.nextDouble();
         double fourthdubl = sc.nextDouble();
-
+        sc.close();
         double sum = firstdubl+=secdubl+=thirddubl+=fourthdubl;
         double average = sum/=4;
 

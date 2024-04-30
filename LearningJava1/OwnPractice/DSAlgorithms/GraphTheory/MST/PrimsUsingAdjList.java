@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.DSAlgorithms.GraphTheory.MST;
+package DSAlgorithms.GraphTheory.MST;
 import java.util.*;
 
 /*
