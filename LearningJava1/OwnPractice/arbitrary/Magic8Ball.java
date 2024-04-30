@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.arbitrary;
+package arbitrary;
 import java.util.Scanner;
 
 public class Magic8Ball {

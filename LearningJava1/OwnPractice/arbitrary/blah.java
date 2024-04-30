@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.arbitrary;
+package arbitrary;
 
 class Main {
     public static void main(String[] args) {

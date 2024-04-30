@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.DSAlgorithms;
+package DSAlgorithms;
 //import java.io.*;
 
 import java.util.Random;

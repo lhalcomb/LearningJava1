@@ -1,4 +1,4 @@
-package LearningJava1.OwnPractice.arbitrary;
+package arbitrary;
 
 public class ReverseString {
 
