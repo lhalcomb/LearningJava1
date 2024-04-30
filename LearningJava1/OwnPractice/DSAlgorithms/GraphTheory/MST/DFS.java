@@ -1,4 +1,4 @@
-package DSAlgorithms.GraphTheory.MST;
+package MST;
 import java.util.*;
 
 public class DFS {
