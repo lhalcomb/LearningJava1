@@ -1,4 +1,4 @@
-package MST;
+package DFS;
 import java.util.*;
 
 public class DFS {
@@ -17,16 +17,16 @@ public class DFS {
     }
     static class Edge{
 
-        int weigth;
+        int weight;
         City destination;
 
-        public Edge (City destination, int weigth){
+        public Edge (City destination, int weight){
             this.destination = destination;
-            this.weigth = weigth;
+            this.weight = weight;
         }
 
         public String toString(){
-            return "(" + this.destination + ", "+this.weigth+")";
+            return "(" + this.destination + ", "+this.weight+")";
         }
     }
 
@@ -42,14 +42,14 @@ public class DFS {
             System.out.print(start + " ");
             visited.add(start);
 
-            List<Edge> neighbors = adjacencyList.get(start);
-            if (neighbors != null){
-            for (Edge neighbor: adjacencyList.get(start)){
-                if(!visited.contains(neighbor.destination)){
-                    DepthFirstTraverse(neighbor.destination, visited);
+                List<Edge> neighbors = adjacencyList.get(start);
+                if (neighbors != null){
+                for (Edge neighbor: adjacencyList.get(start)){
+                    if(!visited.contains(neighbor.destination)){
+                        DepthFirstTraverse(neighbor.destination, visited);
+                    }
                 }
             }
-        }
 
         }
 
