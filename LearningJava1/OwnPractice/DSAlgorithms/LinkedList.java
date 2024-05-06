@@ -22,7 +22,7 @@ public class LinkedList
     
     public static LinkedList insert(LinkedList list, int data)
     {
-        Node new_node = new Node(data); //<- why the hell isnt this working?, '*static class Node*'
+        Node new_node = new Node(data); //<- why the hell isnt this working?, 'static class Node'
         new_node.next = null;
        
         // If the linkedlist is empty then make this node as head of the Linked List and return
@@ -244,19 +244,83 @@ public class LinkedList
       }
       System.out.println();
     }
+    public void swapNodes(int x, int y){
 
-    public void printList(Node head)
+        //Edge Case #1. See if list is empty
+        if (head == null){
+            return;
+        }
+
+        //Edge Case #2. If x == y then do nothing
+        if (x == y){
+            return;
+        }
+
+        //Traversing for x
+        Node prevX = null;
+        Node currX = head;
+
+        while (currX != null && currX.data != x){
+            prevX = currX;
+            currX = currX.next;
+        }
+
+        //Traversing for y
+        Node prevY = null;
+        Node currY = head;
+
+        while (currY != null && currY.data != y){
+            prevY = currY;
+            currY = currY.next;
+        }
+
+        //If neither the x and y element to be swapped is in the list then just return
+        if (currX == null || currY == null){
+            return;
+        }
+
+        // Swap x with y
+        if (prevX != null){
+            prevX.next = currY;
+
+        }else{
+            head = currY;
+        }
+        
+        // Swap y with x
+        if(prevY != null) {
+            prevY.next = currX;
+        } else {
+            head = currX;
+        }
+
+        //Swaps the nodes in list 
+        Node temp = currX.next;
+        currX.next = currY.next;
+        currY.next = temp; 
+
+    }
+
+    public void printList()
     {
-        while (head != null) {
-            System.out.print(head.data + " ");
-            head = head.next;
+        Node currNode = head;
+        while (currNode != null) {
+            System.out.print(currNode.data + " ");
+            currNode = currNode.next;
         }
     }
 
     public static void main(String[] args){
 
     LinkedList list = new LinkedList();
-    Random rand = new Random();
+
+    list.insert(list, 1);
+    list.insert(list, 2);
+    list.printList();
+    list.swapNodes(1, 2);
+    list.printList();
+
+    /* Random rand = new Random();
     int arr[] = new int[10];
     for (int i = 0; i < arr.length; i++){
         arr[i] = rand.nextInt(100)+1;
@@ -266,7 +330,7 @@ public class LinkedList
 
     list.head = list.mergeSort(list.head);
     System.out.print("Sorted Linked List -->  ");
-    list.printList(list.head);
+    list.printList(list.head); */
         
     /*list = insert(list, 1);
     list = insert(list, 2);
