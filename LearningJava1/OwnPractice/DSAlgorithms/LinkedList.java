@@ -308,6 +308,7 @@ public class LinkedList
             System.out.print(currNode.data + " ");
             currNode = currNode.next;
         }
+        System.out.println("");
     }
 
     public static void main(String[] args){
@@ -316,21 +317,26 @@ public class LinkedList
 
     list.insert(list, 1);
     list.insert(list, 2);
+    list.insert(list, 69);
     list.printList();
-    list.swapNodes(1, 2);
+    list.swapNodes(1, 69);
+    list.printList();
+    list.RemoveNodebyKey(list, 69);
     list.printList();
 
-    /* Random rand = new Random();
+    Random rand = new Random();
+    LinkedList list2 = new LinkedList();
     int arr[] = new int[10];
     for (int i = 0; i < arr.length; i++){
         arr[i] = rand.nextInt(100)+1;
-        list = insert(list, arr[i]);
+        list2 = insert(list2, arr[i]);
     } 
 
-
-    list.head = list.mergeSort(list.head);
+    System.out.print("Unsorted Linked List --> ");
+    list2.printList();
+    list2.head = list.mergeSort(list2.head);
     System.out.print("Sorted Linked List -->  ");
-    list.printList(list.head); */
+    list2.printList();
         
     /*list = insert(list, 1);
     list = insert(list, 2);
@@ -351,7 +357,7 @@ public class LinkedList
     InsertAfter(list, 4, 8);
 
     printList(list); //--> 2, 4, 8, 5*/
-
+ 
 
 
     }
