@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package LearningJava1.OwnPractice.arbitrary;
 
 public class ReverseString {
@@ -23,4 +24,31 @@ public class ReverseString {
          return out.toString();
     }
 
+=======
+package arbitrary;
+
+public class ReverseString {
+
+    public static void main(String[] args){
+        String str = " valid input here ";
+
+        System.out.println(reverse(str));
+}
+
+    public static String reverse(String in){
+        if (in == null){
+            throw new IllegalArgumentException("Null is not valid input");
+        }
+    
+         StringBuilder out = new StringBuilder();
+
+         char[] chars = in.toCharArray();
+
+         for (int i = chars.length - 1; i >= 0; i--){
+            out.append(chars[i]);
+         }
+         return out.toString();
+    }
+
+>>>>>>> d6f526c51a0267859233adc45da94e8a1c176324
 }
