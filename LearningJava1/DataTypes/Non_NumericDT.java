@@ -19,5 +19,8 @@ public class Non_NumericDT {
          
          System.out.println((int)c);
          System.out.println(c1);
+
+         char[10] s = "hello";
+
     }
 }
