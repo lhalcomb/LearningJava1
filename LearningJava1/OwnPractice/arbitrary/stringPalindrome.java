@@ -22,5 +22,9 @@ public class stringPalindrome{
        System.out.println(Palindrome(testStr));
        System.out.println(Palindrome("blah"));
        System.out.println(Palindrome("rotator"));
+
+       String x = "hello";
+       //x.charAt(0) = "b";
+       System.out.println(x);
     }
 }
