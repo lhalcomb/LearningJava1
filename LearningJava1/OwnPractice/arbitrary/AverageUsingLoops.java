@@ -1,4 +1,3 @@
-package arbitrary;
 
 public class AverageUsingLoops{
     public static void main(String[] args){
