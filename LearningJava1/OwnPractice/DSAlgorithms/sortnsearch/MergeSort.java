@@ -1,4 +1,4 @@
-package DSAlgorithms.sortnsearch;
+//package DSAlgorithms.sortnsearch;
 
 import java.util.Random;
 
@@ -130,7 +130,7 @@ public class MergeSort
         long arr[] = new long[1215];
         for (int i = 0; i < arr.length; i++)
         {
-            arr[i] = rand.nextInt(500)+1;
+            arr[i] = rand.nextInt(100)+1;
             li.push(arr[i]);
         }   
         
@@ -142,7 +142,7 @@ public class MergeSort
         System.out.print("Sorted Linked List -->  ");
         li.printList(li.head);
         System.out.println();
-        System.out.println("Time took to sort: "+ elapsedMS +"ms");
+        System.out.println("Time took to sort: "+ elapsedMS/1000 +"s");
 
     
     }

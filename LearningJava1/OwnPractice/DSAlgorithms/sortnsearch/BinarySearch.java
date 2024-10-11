@@ -1,6 +1,5 @@
-package DSAlgorithms.sortnsearch;
 
-public class binarysearch
+public class BinarySearch
 {
     static int binsearching(int arr[], int key, int low, int high)
 {
